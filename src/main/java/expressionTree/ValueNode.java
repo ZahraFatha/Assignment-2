@@ -18,7 +18,6 @@ public class ValueNode implements TreeNode {
      *
      * @param value         Value for operation
      */
-
     public ValueNode(float value){
 
         this.value = value;
