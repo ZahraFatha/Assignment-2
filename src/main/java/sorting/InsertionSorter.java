@@ -1,3 +1,4 @@
+
 /**
  * @author Aanisha Newaz
  * @author Zahra Fatha
@@ -18,8 +19,8 @@ public class InsertionSorter extends Sorter {
      */
     public void sort(double[] list){
         resetOpCount(); //reset assignment operation count to 0
-        printInsertionArray(list);
-        double pivot; //will be used as a "key" to be compared to and be placed in sorted array
+
+        double key; //will be used as a "key" to be compared to and be placed in sorted array
         int current; //will be used to loop through sorted part of list to set pivot
 
         //loop through all indexes to set each element as pivot to sort the left part of the list
@@ -27,14 +28,14 @@ public class InsertionSorter extends Sorter {
 
             //count assignment operation of pivot
             countOp();
-            //initialize pivot as a current element
-            pivot = list[i];
+            //initialize key as a current element
+            key = list[i];
 
             //initialize current index which will be used to compare elements with the pivot
             current = i-1;
 
-            //loop through "sorted" part of the array from the pivot to 0 index until the element is smaller than pivot
-            while (current >= 0 && list[current] > pivot) {
+            //loop through "sorted" part of the array from the key to 0 index until the element is smaller than key
+            while (current >= 0 && list[current] > key) {
                 //count assignment operation of list changing order of elements
                 countOp();
                 //initialize the element after the current index as the current element
@@ -45,15 +46,14 @@ public class InsertionSorter extends Sorter {
 
             }
 
-
             //count assignment operation as the next element is initialized as the pivot
             countOp();
             // once the index j reaches 0 or an element smaller than pivot is found,
-            //      let the next element be initialized as the pivot
-            list[current+1] = pivot;
+            //      let the next element be initialized as the key
+            list[current+1] = key;
         }
 
-        printInsertionArray(list); //used to print array
+        //printInsertionArray(list); //used to print array
     }
 
     /**
@@ -61,7 +61,6 @@ public class InsertionSorter extends Sorter {
      *
      * @param list          Sorted array that's passed from Sort function
      */
-
     public static void printInsertionArray(double list[])
     {
         for (int i = 0; i < list.length; ++i)
