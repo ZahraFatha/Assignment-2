@@ -24,7 +24,6 @@ public class OpNode implements TreeNode{
      * @param operation     String passed from driver to operate on values
      * @param right         Right ValueNode for value passed from main driver
      */
-
     public OpNode(ValueNode left, String operation, ValueNode right){
         this.left = left;
         this.operation = operation;
@@ -39,7 +38,6 @@ public class OpNode implements TreeNode{
      * @param operation     String passed from driver to operate on values
      * @param right         Right OpNode for previously evaluated operation passed from main driver
      */
-
     public OpNode(ValueNode left, String operation, OpNode right){
         this.left = left;
         this.operation = operation;
@@ -55,7 +53,6 @@ public class OpNode implements TreeNode{
      * @param operation     String passed from driver to operate on values
      * @param right         Right ValueNode for value passed from main driver
      */
-
     public OpNode(OpNode left, String operation, ValueNode right){
         this.left = left;
         this.operation = operation;
@@ -71,7 +68,6 @@ public class OpNode implements TreeNode{
      * @param operation     String passed from driver to operate on values
      * @param right         Right OpNode for previously evaluated operation passed from main driver
      */
-
     public OpNode(OpNode left, String operation, OpNode right){
         this.left = left;
         this.operation =operation;
@@ -84,7 +80,6 @@ public class OpNode implements TreeNode{
      *
      * @return          Result from operation
      */
-
     public double evaluate() {
         double result = 0;
 
