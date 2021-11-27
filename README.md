@@ -4,7 +4,7 @@
 
 Your name:  `Zahra Fatha`
 
-Your teammates name:  `Aanisha Nawaz`
+Your teammates name:  `Aanisha Newaz`
 
 ## Collaboration Policy
 Students are encouraged to work in teams of two students for this assignment. Students can work alone, if they prefer.  Teams larger than 2 are not permitted.
