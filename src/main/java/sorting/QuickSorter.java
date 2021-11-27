@@ -1,3 +1,4 @@
+
 /**
  * @author Aanisha Newaz
  * @author Zahra Fatha
@@ -18,15 +19,13 @@ public class QuickSorter extends Sorter {
      *
      * @param list          double array
      */
-
     public void sort(double[] list){
         resetOpCount(); //reset operation count
-        printQuickArray(list);
 
         quickSort(list, 0, list.length-1);
 
         //used to print sorted list
-        printQuickArray(list);
+        //printQuickArray(list);
     }
 
     /**
@@ -65,11 +64,11 @@ public class QuickSorter extends Sorter {
         countOp();
         //the pivot will be used as a comparator so elements could be swapped based on
         // whether they're greater or smaller
-        float pivot = (float)list[right];
+        double pivot = list[right];
 
         int i = left; //used as an increment so the index stays within the partition
         int j = (left-1); //used as an index for swapping elements
-        float temp; //temp var for swapping elements
+        double temp; //temp var for swapping elements
 
         //loop though partitioned list and compare the elements with pivot one by one
         while (i < right) {
@@ -79,7 +78,7 @@ public class QuickSorter extends Sorter {
 
                 //count assignment operation every time the elements swap
                 countOp();
-                temp = (float)list[j];
+                temp = list[j];
                 countOp();
                 list[j] = list[i];
                 countOp();
@@ -90,7 +89,7 @@ public class QuickSorter extends Sorter {
 
         //count operation assignment on every step of the element swap
         countOp();
-        temp = (float)list[j+1];
+        temp = list[j+1];
         countOp();
         list[j+1] = list[right];
         countOp();
