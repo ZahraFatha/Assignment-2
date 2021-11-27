@@ -14,7 +14,6 @@ public interface TreeNode {
      *
      * @return          Result after evaluation of operation
      */
-
     public abstract double evaluate();
 
     /**
@@ -22,6 +21,5 @@ public interface TreeNode {
      *
      * @param depth     Depth of tree that will be used to print roots and leaves of the evaluation tree
      */
-
     public abstract void print(int depth);
 }
